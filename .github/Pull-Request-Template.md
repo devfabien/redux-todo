@@ -4,7 +4,7 @@ Please include a brief description of the pull request you want to raise.
 
 ## Description of tasks that were expected to be completed
 
-List all the tasks and sub-tasks that were assigned to you Make sure you check every completed task. list them in this style
+List all the tasks and sub-tasks that were assigned to you make sure you check every completed task. list them in this style
 
 - [ ] Create .....
 - [ ] Add .....
