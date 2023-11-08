@@ -1,4 +1,6 @@
-export default function Form() {
+import { ReactElement } from "react";
+
+export default function Form(): ReactElement {
   return (
     <div className="h-screen flex justify-center items-center">
       <form className="bg-blue-800 p-10 shadow-2xl rounded-md">
