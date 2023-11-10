@@ -1,6 +1,7 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 
 export default function Form(): ReactElement {
+  const [input, setInput] = useState("");
   return (
     <div className="h-screen flex justify-center items-center">
       <form className="bg-blue-800 p-10 shadow-2xl rounded-md">
@@ -9,6 +10,8 @@ export default function Form(): ReactElement {
           type="text"
           name="todoTask"
           placeholder="Todo task..."
+          value={input}
+          onChange={(event) => setInput(event.target.value)}
           className="outline-none py-3 px-6 mx-3 text-gray-800"
         />
         <button className="mx-4 text-lg bg-gray-500 p-3 rounded-full hover:bg-gray-400 hover:font-semibold text-gray-100">
