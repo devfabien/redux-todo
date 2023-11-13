@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, ReactElement, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/todo";
+import TodoList from "./Todolist";
 
 export default function FormAndTodos(): ReactElement {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ export default function FormAndTodos(): ReactElement {
           Add
         </button>
       </form>
+      <TodoList />
     </div>
   );
 }
