@@ -2,7 +2,7 @@ import { ChangeEvent, FormEvent, ReactElement, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/todo";
 
-export default function Form(): ReactElement {
+export default function FormAndTodos(): ReactElement {
   const dispatch = useDispatch();
   const [input, setInput] = useState("");
 
