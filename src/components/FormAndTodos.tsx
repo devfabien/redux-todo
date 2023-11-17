@@ -38,7 +38,7 @@ export default function FormAndTodos(): ReactElement {
           Add
         </button>
       </form>
-      <TodoList />
+      <TodoList newText={input} />
     </div>
   );
 }
