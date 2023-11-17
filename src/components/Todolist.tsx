@@ -16,7 +16,7 @@ export default function TodoList(): ReactElement {
     }) => state.todo.value
   );
   const todoTasks = tasks
-    .filter((task, index) => index > 0)
+    .filter((_, index) => index > 0)
     .map((task) => (
       <div className="flex justify-between w-full items-center" key={task.id}>
         <input
