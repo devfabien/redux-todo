@@ -13,7 +13,7 @@ export default function FormAndTodos(): ReactElement {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (input !== "") {
+    if (input !== "" && input.trim() !== "") {
       dispatch(addTodo(input));
     }
     setInput("");
