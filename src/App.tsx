@@ -1,9 +1,9 @@
-import Form from "./components/Form";
+import FormAndTodos from "./components/FormAndTodos";
 
 export default function App() {
   return (
     <div>
-      <Form />
+      <FormAndTodos />
     </div>
   );
 }
