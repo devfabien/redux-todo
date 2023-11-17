@@ -21,19 +21,28 @@ const todoSlice = createSlice({
     },
 
     deleteTodo: (state, action) => {
-      const newArr = state.value.filter((item) => item.id !== action.payload);
+      const newArr = state.value.filter(
+        (item) => item.id !== action.payload.id
+      );
       return { ...state, value: [...newArr] };
     },
 
     completedTodo: (state, action) => {
       const newArr = state.value.map((item) =>
-        item.id === action.payload
+        item.id === action.payload.id
           ? { ...item, isCompleted: !item.isCompleted }
           : item
       );
       return { ...state, value: [...newArr] };
     },
+    editTodo: (state, action) => {
+      const index = state.value.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      state.value[index].text = action.payload.text;
+    },
   },
 });
 export default todoSlice.reducer;
-export const { addTodo, deleteTodo, completedTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo, completedTodo, editTodo } =
+  todoSlice.actions;
